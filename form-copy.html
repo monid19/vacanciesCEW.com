@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="https://formcarry.com/s/1oR1NOXtURn" method="POST" >
+        <input
+          type="hidden"
+          name="_redirect"
+          value="http://127.0.0.1:5500/form.html"
+        /> 
+        <h3>Apply for this internship</h3>
+        <div style="display:flex; flex-direction:row; padding-bottom:20px;">
+        <p style="color:red">*</p><p>Indicates required field</p>
+        </div>
+        
+        <div class="input-container">
+            <div style="display:flex; flex-direction:row">
+            <p>First name</p>
+            <p style="color:red">*</p>
+            </div>
+            <input 
+                type="text" 
+                name="first-name" 
+                id="first-name" required/>
+        </div>
+        
+        <div class="input-container">
+            <div style="display:flex; flex-direction:row">
+            <p>Last name</p>
+            <p style="color:red">*</p>
+            </div>
+        <input 
+            type="text" 
+            name="last-name" 
+            id="last-name" required/>
+        </div>
+
+        <div class="input-container">
+            <div style="display:flex; flex-direction:row">
+            <p>Email</p>
+            <p style="color:red">*</p>
+            </div>
+        <input 
+            type="email" 
+            name="email" 
+            id="email" required/>
+        </div>
+
+        <div class="input-container">
+            <div style="display:flex; flex-direction:row">
+            <p>Phone</p>
+            <p style="color:red">*</p>
+            </div>
+        <input 
+            type="text" 
+            name="phone" 
+            id="phone" required/>
+        </div>
+
+        <div class="input-container">
+            <div style="display:flex; flex-direction:row">
+            <p>Address</p>
+            <p style="color:red">*</p>
+            </div>
+        <input 
+            type="text" 
+            name="address" 
+            id="address" required/>
+        </div>
+
+        <div style="display:flex; flex-direction:row">
+        <h5>Resume/CV</h5><p style="color:red">*</p>
+        </div>
+            
+            <div class="file-input">
+                <label for="cv">Attach</label>
+                <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx,.txt,.rtf" required />  
+            </div>
+         <p id="cv-filename" style="font-style: italic; color: grey; margin-top: 5px;"></p>   
+         <p style="color: grey">Accepted file types: pdf, doc, docx, txt, rtf</p>
+        
+        <div style="display:flex; flex-direction:row">
+        <h5>Cover letter</h5><p style="color:red">*</p>
+        </div>
+
+        <div class="file-input"> 
+            <label for="portfolio">Attach</label>
+            <input type="file" name="portfolio" id="portfolio" accept=".pdf,.doc,.docx,.txt,.rtf" required />
+            <p id="cv-filename" style="font-style: italic; color: grey; margin-top: 5px;"></p>
+        </div>
+        <p id="cv-filename" style="font-style: italic; color: grey; margin-top: 5px;"></p>
+        <p style="color: grey">Accepted file types: pdf, doc, docx, txt, rtf</p> 
+       
+        <input 
+            type="url" 
+            name="link" 
+            id="link" 
+            placeholder="Link of your website/portfolio">
+        
+        <div style="display: flex; justify-content: flex-end;">
+             <button
+            id="button-submit"
+            type="submit">Submit application</button>
+        </div>
+       
+      </form>
+
+      <script>
+        const cvInput = document.getElementById('cv');
+        const cvFilename = document.getElementById('cv-filename');
+      
+        cvInput.addEventListener('change', () => {
+          if (cvInput.files.length > 0) {
+            cvFilename.textContent = `Selected file: ${cvInput.files[0].name}`;
+          } else {
+            cvFilename.textContent = '';
+          }
+        });
+      </script>
+</body>
+</html>

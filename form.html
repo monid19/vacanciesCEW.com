@@ -1,0 +1,80 @@
+
+    <form action="https://submit-form.com/BymKuQXvZ" method="POST" enctype="multipart/form-data">
+        <!-- <input
+          type="hidden"
+          name="_redirect"
+          value="http://127.0.0.1:5500/form.html"
+        /> -->
+        <h3>Apply for this internship</h3>
+        <div style="display:flex; flex-direction:row;">
+        <p style="color:red">*</p><p>Indicates required field</p>
+        </div>
+        
+      
+             <input 
+            type="text" 
+            name="first-name" 
+            id="first-name" 
+            placeholder="First name*" required/>
+     
+       
+
+        <input 
+            type="text" 
+            name="last-name" 
+            id="last-name" 
+            placeholder="Last name*" required/>
+
+        <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            placeholder="Email*" required/>
+
+        <input 
+            type="text" 
+            name="phone" 
+            id="phone" 
+            placeholder="Phone number*" required/>
+
+        <input 
+            type="text" 
+            name="address" 
+            id="address" 
+            placeholder="Address*" required/>
+
+        <div style="display:flex; flex-direction:row">
+        <h5>Resume/CV</h5><p style="color:red">*</p>
+        </div>
+            
+            <div class="file-input">
+                <label for="cv">Attach</label>
+                <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx,.txt,.rtf" required />
+            </div>
+            
+        <p style="color: grey">Accepted file types: pdf, doc, docx, txt, rtf</p>
+        
+        <div style="display:flex; flex-direction:row">
+        <h5>Cover letter</h5><p style="color:red">*</p>
+        </div>
+
+        <div class="file-input"> 
+            <label for="portfolio">Attach</label>
+            <input type="file" name="portfolio" id="portfolio" accept=".pdf,.doc,.docx,.txt,.rtf" required /> 
+        </div>
+            
+        <p style="color: grey">Accepted file types: pdf, doc, docx, txt, rtf</p>
+    
+        <input 
+            type="url" 
+            name="link" 
+            id="link" 
+            placeholder="Link of your website/portfolio">
+        
+        <div style="display: flex; justify-content: flex-end;">
+             <button
+            id="button-submit"
+            type="submit">Submit application</button>
+        </div>
+       
+      </form>
